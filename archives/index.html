@@ -5,10 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 <meta name="generator" content="Hexo 4.2.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/cat.gif" color="#222">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/cat.gif">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/cat.gif">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/cat.gif">
 
 <link rel="stylesheet" href="/css/main.css">
 
@@ -40,8 +39,8 @@
       hits: {"per_page":10},
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     },
-    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
-    path: '',
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
   };
 </script>
@@ -164,9 +163,34 @@
     <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
   </ul>
 
 </nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="Searching..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
 </div>
     </header>
 
@@ -196,7 +220,7 @@
 
       
     <div class="collection-year">
-      <h1 class="collection-header">2019</h1>
+      <h1 class="collection-header">2020</h1>
     </div>
 
   <article itemscope itemtype="http://schema.org/Article">
@@ -204,14 +228,14 @@
 
       <div class="post-meta">
         <time itemprop="dateCreated"
-              datetime="2019-12-31T23:44:30+08:00"
-              content="2019-12-31">
-          12-31
+              datetime="2020-01-03T04:28:13+08:00"
+              content="2020-01-03">
+          01-03
         </time>
       </div>
 
       <h2 class="post-title">
-          <a class="post-title-link" href="/2019/12/31/hello-world/" itemprop="url">
+          <a class="post-title-link" href="/2020/01/03/hello-world/" itemprop="url">
             <span itemprop="name">Hello World</span>
           </a>
       </h2>
@@ -350,6 +374,8 @@
   </div>
 
   
+  
+  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="/lib/canvas-nest/canvas-nest.min.js"></script>
   <script src="/lib/anime.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
@@ -370,6 +396,10 @@
   
 
 
+
+
+  
+<script src="/js/local-search.js"></script>
 
 
 
